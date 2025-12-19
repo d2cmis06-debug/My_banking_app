@@ -39,7 +39,7 @@ st.markdown("""
 if "accounts" not in st.session_state:
     st.session_state.accounts = {
         "Admin": {"balance": 50000.0, "type": "Savings"},
-        "Rahul": {"balance": 10000.0, "type": "Current"}
+        "Mangesh": {"balance": 10000.0, "type": "Current"}
     }
 if "history" not in st.session_state:
     st.session_state.history = []
@@ -109,4 +109,5 @@ with tab2:
 with tab3:
     st.markdown("### Transaction Records")
     if st.session_state.history:
+
         st.table(pd.DataFrame(st.session_state.history))
